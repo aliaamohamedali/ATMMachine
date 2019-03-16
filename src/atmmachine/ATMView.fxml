@@ -16,7 +16,7 @@
             <Font name="System Bold" size="24.0" />
          </font>
       </Label>
-      <Button id="oneBtn" fx:id="oneBtn" layoutX="370.0" layoutY="79.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0" text="1" />
+      <Button fx:id="oneBtn" layoutX="370.0" layoutY="79.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0" text="1" />
       <Button fx:id="fourBtn" layoutX="370.0" layoutY="126.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0" text="4" />
       <Button fx:id="sevenBtn" layoutX="370.0" layoutY="174.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0" text="7" />
       <Button fx:id="depositBtn" layoutX="21.0" layoutY="265.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="105.0" text="Deposit" />
@@ -35,10 +35,10 @@
       <Button fx:id="cancelBtn" layoutX="246.0" layoutY="296.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="105.0" text="Cancel" />
       <Button layoutX="370.0" layoutY="220.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0" text="*" />
       <Button layoutX="451.0" layoutY="220.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0" text="#" />
-      <Label id="msgLbl" fx:id="msgLbl" disable="true" layoutX="22.0" layoutY="79.0" prefHeight="35.0" prefWidth="328.0" text="ATM Message Label" />
+      <Label fx:id="msgLbl" disable="true" layoutX="22.0" layoutY="79.0" prefHeight="35.0" prefWidth="328.0" text="ATM Message Label" />
       <TextField id="userInputTF" fx:id="userInputTF" disable="true" layoutX="22.0" layoutY="120.0" prefHeight="35.0" prefWidth="218.0" promptText="Input digits" />
-      <Label fx:id="resultLbl" disable="true" layoutX="24.0" layoutY="174.0" prefHeight="83.0" prefWidth="328.0" text="Transaction Output Label" />
-      <Button fx:id="nextBtn" layoutX="370.0" layoutY="265.0" mnemonicParsing="false" onAction="#nextButtonPressed" prefHeight="25.0" prefWidth="74.0" text="Next" />
-      <Button fx:id="previousBtn" layoutX="370.0" layoutY="296.0" mnemonicParsing="false" onAction="#previousButtonPressed" prefHeight="25.0" prefWidth="74.0" text="Previous" />
+      <Label fx:id="resultLbl" disable="true" layoutX="24.0" layoutY="174.0" prefHeight="83.0" prefWidth="328.0" text="Transaction Output Label" textAlignment="CENTER" />
+      <Button fx:id="nextBtn" layoutX="322.0" layoutY="174.0" mnemonicParsing="false" onAction="#nextButtonPressed" prefHeight="83.0" prefWidth="28.0" text="&gt;" />
+      <Button fx:id="previousBtn" layoutX="24.0" layoutY="174.0" mnemonicParsing="false" onAction="#previousButtonPressed" prefHeight="83.0" prefWidth="28.0" text="&lt;" />
    </children>
 </Pane>

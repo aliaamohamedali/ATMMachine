@@ -108,7 +108,7 @@ public class ATMController implements Initializable {
                 showBalanceBtn.setDisable(false);
                 showTransactionsBtn.setDisable(false);
                 cancelBtn.setDisable(false);
-               leaveBtn.setDisable(false);
+                leaveBtn.setDisable(false);
                 // change submit button function
                 submitBtn.removeEventFilter(MouseEvent.MOUSE_CLICKED, login);
                 submitBtn.addEventFilter(MouseEvent.MOUSE_CLICKED, commitTransaction);
@@ -124,13 +124,10 @@ public class ATMController implements Initializable {
                 resultLbl.setText("Your Current Balance: " + balance);
             }
             else if(transactionType == Transaction.LAST5){
-               idx = 0;
-               resultLbl.setText( atm.getLast5().get(idx).toString()); 
-              if(atm.getLast5().size()> 1){
-                  previousBtn.setDisable(false);
-                  nextBtn.setDisable(false);
-              }
-               
+                idx = 0;
+                resultLbl.setText( atm.getLast5().get(idx).toString()); 
+                previousBtn.setDisable(false);
+                nextBtn.setDisable(false);
             }
             else if (transactionType == Transaction.WITHDRAW){
                 Double amountToWithdraw = Double.valueOf(userInputTF.getText());
@@ -195,18 +192,17 @@ public class ATMController implements Initializable {
         }           
     };
     public void nextButtonPressed(){
+        if (idx == atm.getLast5().size()-1 || transactionType != Transaction.LAST5) return;
         idx++;
         resultLbl.setText( atm.getLast5().get(idx).toString());
         
     }
     public void previousButtonPressed(){
+        if (idx == 0 || transactionType != Transaction.LAST5) return;
         idx--;
-         resultLbl.setText( atm.getLast5().get(idx).toString());
+        resultLbl.setText( atm.getLast5().get(idx).toString());
     }
-    
-    
-  
-    
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
